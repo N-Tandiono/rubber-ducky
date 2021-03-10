@@ -1,0 +1,22 @@
+REM Author: N-Tandiono
+REM Description: My Something Awesome Project COMP6841
+
+DEFAULTDELAY 100
+
+REM Give Time To Load
+DELAY 100
+
+REM Open Terminal
+GUI r
+STRING cmd
+ENTER
+
+REM Echo Hello World
+STRING echo 'Hello, World!'
+ENTER
+DELAY 1000
+
+REM Exit Terminal
+STRING exit
+ENTER
+DELAY 100
