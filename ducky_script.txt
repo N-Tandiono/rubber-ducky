@@ -10,7 +10,33 @@ REM Open Terminal
 GUI r
 STRING cmd
 ENTER
+DELAY 100
 
+REM Open notepad
+STRING notepad "Downloads/hello.txt"
+ENTER
+DELAY 100
+
+REM Create notepad
+ENTER
+DELAY 100
+
+REM Type Hello, World!
+STRING Hello, World!
+ENTER
+DELAY 100
+
+REM Save Notepad
+ALT f
+STRING s
+DELAY 100
+
+REM Close Notepad
+ALT f
+STRING x
+DELAY 100
+
+REM Back in Terminal
 REM Echo Hello World
 STRING echo 'Hello, World!'
 ENTER
