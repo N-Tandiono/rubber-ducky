@@ -12,8 +12,18 @@ STRING cmd
 ENTER
 DELAY 100
 
+REM Colour Change
+STRING color 4
+ENTER
+DELAY 100
+
+REM Check if it already exists, if yes, delete it
+STRING erase /Q "Downloads\hello.txt"
+ENTER
+DELAY 100
+
 REM Open notepad
-STRING notepad "Downloads/hello.txt"
+STRING notepad "Downloads\hello.txt"
 ENTER
 DELAY 100
 
@@ -36,6 +46,17 @@ ALT f
 STRING x
 DELAY 100
 
+REM Redirect User to Website
+GUI r
+DELAY 100
+STRING https://google.com
+ENTER
+DELAY 1000
+
+REM Close Website
+ALT-TAB
+DELAY 1000
+
 REM Back in Terminal
 REM Echo Hello World
 STRING echo 'Hello, World!'
@@ -46,3 +67,6 @@ REM Exit Terminal
 STRING exit
 ENTER
 DELAY 100
+
+REM Lock Laptop
+GUI l
